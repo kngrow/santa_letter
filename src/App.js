@@ -27,7 +27,7 @@ class App extends Component {
 
   convertText = () => {
     if(this.state.text !== ""){
-      return this.state.text.split('\n').map((m,k) => <p>{m}</p>);
+      return this.state.text.split('\n').map((m,k) => <p key={k}>{m}</p>);
     } else {
       return "";
     }

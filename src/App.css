@@ -51,6 +51,7 @@
   background-color: beige;
   font-family :'zenzidou';
   height:80vh;
+  position: relative;
 }
 .letter_text .dear_santa{
   padding-left: 20px !important;
@@ -58,6 +59,8 @@
 .letter_text .from_name{
   text-align: right;
   padding-right: 50px;
+  position: absolute;
+  bottom:0;
 }
 .letter_text p {
   width:100%;
