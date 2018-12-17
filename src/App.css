@@ -62,7 +62,8 @@
   position: absolute;
   bottom:0;
 }
-.letter_text p {
+.letter_text span {
+  display:block;
   width:100%;
   border-bottom :1px dashed #000;
   text-align: left;

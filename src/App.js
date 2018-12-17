@@ -27,7 +27,7 @@ class App extends Component {
 
   convertText = () => {
     if(this.state.text !== ""){
-      return this.state.text.split('\n').map((m,k) => <p key={k}>{m}</p>);
+      return this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
     } else {
       return "";
     }
@@ -46,15 +46,17 @@ class App extends Component {
             </Col>
           </Row>
           <Row>
-            <Col className="form">
+            <Col className="form" xs="12" lg="6">
               <div className="text-left">さんたさんへ</div>
                 <InputComponent onUpdate={ this.updateText }/>
                 <FromComponent onUpdate={ this.updateName }/>
             </Col>
-            <Col className="letter_text">
-                <p className="dear_santa">さんたさんへ</p>
+            <Col className="letter_text" xs="12" lg="6">
+                <p>
+                <span className="dear_santa">さんたさんへ</span>
                 { this.convertText() }
-                <p className="from_name">{this.state.name} より</p>
+                <span className="from_name">{this.state.name} より</span>
+              </p>
             </Col>
           </Row>
         <Row className="text-white">
