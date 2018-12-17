@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import font from './zenzidou.ttf';
 import './App.css';
 import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
 import { Container,Row,Col } from 'reactstrap';
+import html2canvas from 'html2canvas';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       text: "",
-      name: "たかし"
+      name: "たかし",
     }
   }
   updateText = (val) => {
@@ -27,7 +27,18 @@ class App extends Component {
 
   convertText = () => {
     if(this.state.text !== ""){
-      return this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
+      const text = this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
+      // let letter_img = document.querySelector('.letter_img');
+      html2canvas(document.querySelector('.letter_text')).then(canvas => {
+      let letter_img = document.querySelector('.letter_img');
+        console.log(letter_img);
+        // debugger;
+        if(letter_img.firstChild){
+          letter_img.removeChild(letter_img.firstChild);
+        }
+        letter_img.appendChild(canvas);
+      });
+      return text;
     } else {
       return "";
     }
@@ -57,6 +68,11 @@ class App extends Component {
                 { this.convertText() }
                 <span className="from_name">{this.state.name} より</span>
               </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="letter_img"></div>
             </Col>
           </Row>
         <Row className="text-white">
