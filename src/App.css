@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+}
+@font-face {
+  font-family: 'zenzidou';
+  src: url('./zenzidou.ttf');
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin { */
+/*   from { */
+/*     transform: rotate(0deg); */
+/*   } */
+/*   to { */
+/*     transform: rotate(360deg); */
+/*   } */
+/* } */
+
+.form {
+  margin-top:63px;
+}
+.form textarea {
+  width:100%;
+  height:50vh;
+}
+
+.letter_text {
+  background-color: beige;
+  font-family :'zenzidou';
+  height:80vh;
+}
+.letter_text .dear_santa{
+  padding-left: 20px !important;
+}
+.letter_text p {
+  width:100%;
+  border-bottom :1px dashed #000;
+  text-align: left;
+  padding-left: 30px;
+  margin:0;
+}
+
+
