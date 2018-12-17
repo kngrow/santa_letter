@@ -39,12 +39,12 @@ class App extends Component {
         <header className="App-header">
           <h1>さんたさんにてがみを書くやつ</h1>
         </header>
+        <Container>
           <Row>
             <Col className="how_to_use">
               <p>さんたさんに<ruby>手<rt>て</rt>紙<rt>がみ</rt></ruby>をかいてみよう！</p>
             </Col>
           </Row>
-        <Container>
           <Row>
             <Col className="form">
               <div className="text-left">さんたさんへ</div>
