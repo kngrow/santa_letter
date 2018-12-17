@@ -36,7 +36,7 @@
 /* } */
 
 .form {
-  margin-top:63px;
+  color:white;
 }
 .form textarea {
   width:100%;
@@ -50,6 +50,10 @@
 }
 .letter_text .dear_santa{
   padding-left: 20px !important;
+}
+.letter_text .from_name{
+  text-align: right;
+  padding-right: 50px;
 }
 .letter_text p {
   width:100%;
