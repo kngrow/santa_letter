@@ -19,35 +19,51 @@ class App extends Component {
           text : val
         });
   }
-
   updateName = (val) => {
     this.setState({
       name:val
     });
   }
+
+  convertText = () => {
+    if(this.state.text !== ""){
+      return this.state.text.split('\n').map((m,k) => <p>{m}</p>);
+    } else {
+      return "";
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>さんたさんにてがみを書くやつ</h1>
         </header>
+          <Row>
+            <Col className="how_to_use">
+              <p>さんたさんに<ruby>手<rt>て</rt>紙<rt>がみ</rt></ruby>をかいてみよう！</p>
+            </Col>
+          </Row>
         <Container>
           <Row>
             <Col className="form">
-              <div>さんたさんへ</div>
+              <div className="text-left">さんたさんへ</div>
                 <InputComponent onUpdate={ this.updateText }/>
                 <FromComponent onUpdate={ this.updateName }/>
             </Col>
-            <Col>
-              <div className="letter_text">
+            <Col className="letter_text">
                 <p className="dear_santa">さんたさんへ</p>
-                { this.state.text !== "" ? this.state.text.split('\n').map(function(m,k){
-                  return <p key={k}>{m}</p>;
-                }) : ""}
+                { this.convertText() }
                 <p className="from_name">{this.state.name} より</p>
-              </div>
             </Col>
           </Row>
+        <Row className="text-white">
+          <Col>
+            <p>
+              てがみの文字の生成には<a href="https://tanukifont.com/zenjido/" target="_blank">全児童ふぉんと</a> の無料版を使わせていただきました<br />
+            </p>
+          </Col>
+        </Row>
         </Container>
       </div>
     );

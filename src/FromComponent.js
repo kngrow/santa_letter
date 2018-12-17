@@ -12,7 +12,7 @@ export class FromComponent extends React.Component {
 
   render() {
     return (
-      <Col>
+      <Col className="text-right">
       おなまえ:<input name="form_name" onChange={this.textUpdate.bind(this)} value="たかし" />
       </Col>
     )
