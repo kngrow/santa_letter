@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
-import { Container,Row,Col } from 'reactstrap';
+import { Container,Row,Col,Button } from 'reactstrap';
 import html2canvas from 'html2canvas';
 
 class App extends Component {
@@ -22,6 +22,11 @@ class App extends Component {
     this.setState({
       name:val
     });
+  }
+
+  downloadImage = (event) => {
+    const img = document.querySelector('canvas').toDataURL('image/png').replace('image/png','image/octet-stream');
+    event.target.href = img;
   }
 
   convertText = () => {
@@ -70,6 +75,7 @@ class App extends Component {
           <Row>
             <Col>
               <div className="letter_img"></div>
+              <a href="#" onClick={this.downloadImage} className="Button" download="tegami.png">てがみを保存する</a>
             </Col>
           </Row>
         <Row className="text-white">
