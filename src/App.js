@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import font from './zenzidou.ttf';
 import './App.scss';
 import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
@@ -28,11 +27,9 @@ class App extends Component {
   convertText = () => {
     if(this.state.text !== ""){
       const text = this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
-      // let letter_img = document.querySelector('.letter_img');
+
       html2canvas(document.querySelector('.letter_text')).then(canvas => {
       let letter_img = document.querySelector('.letter_img');
-        console.log(letter_img);
-        // debugger;
         if(letter_img.firstChild){
           letter_img.removeChild(letter_img.firstChild);
         }

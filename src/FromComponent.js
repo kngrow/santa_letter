@@ -3,9 +3,6 @@ import { Col } from 'reactstrap';
 
 
 export class FromComponent extends React.Component {
-  constructor(props){
-    super(props);
-  }
   textUpdate = (e) => {
     this.props.onUpdate(e.target.value);
   }
