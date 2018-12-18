@@ -62,12 +62,12 @@ class App extends Component {
                 <InputComponent onUpdate={ this.updateText }/>
                 <FromComponent onUpdate={ this.updateName }/>
             </Col>
-            <Col className="letter_text" xs="12" lg="6">
-                <p>
-                <span className="dear_santa">さんたさんへ</span>
-                { this.convertText() }
-                <span className="from_name">{this.state.name} より</span>
-              </p>
+            <Col xs="12" lg="6">
+                <p className="letter_text">
+                  <span className="dear_santa">さんたさんへ</span>
+                  { this.convertText() }
+                  <span className="from_name">{this.state.name} より</span>
+                </p>
             </Col>
           </Row>
           <Row>
