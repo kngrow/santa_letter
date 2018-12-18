@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import font from './zenzidou.ttf';
-import './App.css';
+import './App.scss';
 import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
-import { Container,Row,Col } from 'reactstrap';
+import { Container,Row,Col,Button } from 'reactstrap';
+import html2canvas from 'html2canvas';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       text: "",
-      name: "たかし"
+      name: "たかし",
     }
   }
   updateText = (val) => {
@@ -25,9 +24,23 @@ class App extends Component {
     });
   }
 
+  downloadImage = (event) => {
+    const img = document.querySelector('canvas').toDataURL('image/png').replace('image/png','image/octet-stream');
+    event.target.href = img;
+  }
+
   convertText = () => {
     if(this.state.text !== ""){
-      return this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
+      const text = this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
+
+      html2canvas(document.querySelector('.letter_text')).then(canvas => {
+      let letter_img = document.querySelector('.letter_img');
+        if(letter_img.firstChild){
+          letter_img.removeChild(letter_img.firstChild);
+        }
+        letter_img.appendChild(canvas);
+      });
+      return text;
     } else {
       return "";
     }
@@ -51,12 +64,18 @@ class App extends Component {
                 <InputComponent onUpdate={ this.updateText }/>
                 <FromComponent onUpdate={ this.updateName }/>
             </Col>
-            <Col className="letter_text" xs="12" lg="6">
-                <p>
-                <span className="dear_santa">さんたさんへ</span>
-                { this.convertText() }
-                <span className="from_name">{this.state.name} より</span>
-              </p>
+            <Col xs="12" lg="6">
+                <p className="letter_text">
+                  <span className="dear_santa">さんたさんへ</span>
+                  { this.convertText() }
+                  <span className="from_name">{this.state.name} より</span>
+                </p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="letter_img"></div>
+              <a href="#" onClick={this.downloadImage} className="Button" download="tegami.png">てがみを保存する</a>
             </Col>
           </Row>
         <Row className="text-white">

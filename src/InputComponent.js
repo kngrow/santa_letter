@@ -2,9 +2,6 @@ import React from 'react';
 
 
 export class InputComponent extends React.Component {
-  constructor(props){
-    super(props);
-  }
   textUpdate = (e) => {
     this.props.onUpdate(e.target.value);
   }
