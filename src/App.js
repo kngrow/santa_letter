@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import font from './zenzidou.ttf';
-import './App.css';
+import './App.scss';
 import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
 import { Container,Row,Col } from 'reactstrap';
