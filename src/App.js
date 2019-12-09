@@ -13,12 +13,6 @@ class App extends Component {
       name: "たかし",
     }
   }
-  componentDidMount() {
-    document.fonts.ready.then(function(){
-      document.querySelector('.letter_text').classList.remove("hide");
-      console.log('font loaded');
-    });
-  }
   updateText = (val) => {
         this.setState({
           text : val
@@ -71,7 +65,7 @@ class App extends Component {
                 <FromComponent onUpdate={ this.updateName }/>
             </Col>
             <Col xs="12" lg="6">
-                <p className="letter_text hide">
+                <p className="letter_text">
                   <span className="dear_santa">さんたさんへ</span>
                   { this.convertText() }
                   <span className="from_name">{this.state.name} より</span>
