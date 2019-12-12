@@ -46,6 +46,14 @@ $sp :480px;
     }
   }
 }
+.loading {
+  height: 100vh;
+  div {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+  }
+}
 
 .letter_text {
   font-size:24px;

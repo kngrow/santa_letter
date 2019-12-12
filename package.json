@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "4",
+    "fontfaceobserver": "^2.1.0",
     "html2canvas": "^1.0.0-alpha.12",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
