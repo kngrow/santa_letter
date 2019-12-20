@@ -5,7 +5,10 @@
   "homepage": "https://kngrow.github.io/santa_letter",
   "dependencies": {
     "bootstrap": "4",
+    "file-saver": "^2.0.2",
+    "file-server": "^2.1.0",
     "fontfaceobserver": "^2.1.0",
+    "html-to-image": "^0.1.1",
     "html2canvas": "^1.0.0-alpha.12",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",

@@ -4,6 +4,10 @@ import {InputComponent} from './InputComponent.js'
 import {FromComponent} from './FromComponent.js'
 import { Container, Row, Col } from 'reactstrap';
 import html2canvas from 'html2canvas';
+import htmlToImage from 'html-to-image';
+import { saveAs } from 'file-saver';
+
+
 
 const FontFaceObserver = require('fontfaceobserver');
 
@@ -36,22 +40,20 @@ class App extends Component {
     });
   }
 
-  downloadImage = (event) => {
-    const img = document.querySelector('canvas').toDataURL('image/png').replace('image/png','image/octet-stream');
-    event.target.href = img;
+   downloadImage = (event) => {
+    const letter_img = document.querySelector('.letter_text');
+    htmlToImage.toBlob(letter_img).then((blob) => {
+        saveAs(blob, 'tegami.png')
+      })
+      .catch(function (error) {
+        console.error('oops, something went wrong!', error);
+      });
+    // const img = document.querySelector('canvas').toDataURL('image/png').replace('image/png','image/octet-stream');
   }
 
   convertText = () => {
     if(this.state.text !== ""){
       const text = this.state.text.split('\n').map((m,k) => <span key={k}>{m}</span>);
-
-      html2canvas(document.querySelector('.letter_text')).then(canvas => {
-      let letter_img = document.querySelector('.letter_img');
-        if(letter_img.firstChild){
-          letter_img.removeChild(letter_img.firstChild);
-        }
-        letter_img.appendChild(canvas);
-      });
       return text;
     } else {
       return "";
@@ -87,8 +89,7 @@ class App extends Component {
             </Row>
             <Row>
               <Col>
-                <div className="letter_img"></div>
-                <a href="#" onClick={this.downloadImage} className="Button" download="tegami.png">てがみを保存する</a>
+                <a href="#" onClick={this.downloadImage} className="Button">てがみを保存する</a>
               </Col>
             </Row>
           <Row className="text-white">
