@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/santa_letter/static/css/main.7fdaa0db.chunk.css",
-    "main.js": "/santa_letter/static/js/main.19eb844d.chunk.js",
-    "main.js.map": "/santa_letter/static/js/main.19eb844d.chunk.js.map",
+    "main.js": "/santa_letter/static/js/main.b175de99.chunk.js",
+    "main.js.map": "/santa_letter/static/js/main.b175de99.chunk.js.map",
     "runtime-main.js": "/santa_letter/static/js/runtime-main.57896b15.js",
     "runtime-main.js.map": "/santa_letter/static/js/runtime-main.57896b15.js.map",
     "static/css/2.d5831cfa.chunk.css": "/santa_letter/static/css/2.d5831cfa.chunk.css",
-    "static/js/2.69f7e6e4.chunk.js": "/santa_letter/static/js/2.69f7e6e4.chunk.js",
-    "static/js/2.69f7e6e4.chunk.js.map": "/santa_letter/static/js/2.69f7e6e4.chunk.js.map",
+    "static/js/2.ed8ad736.chunk.js": "/santa_letter/static/js/2.ed8ad736.chunk.js",
+    "static/js/2.ed8ad736.chunk.js.map": "/santa_letter/static/js/2.ed8ad736.chunk.js.map",
     "index.html": "/santa_letter/index.html",
-    "precache-manifest.6ea82535397f4975bef8ee8fb7b955a5.js": "/santa_letter/precache-manifest.6ea82535397f4975bef8ee8fb7b955a5.js",
+    "precache-manifest.e0403ebba843a0bb136eea02f08736e7.js": "/santa_letter/precache-manifest.e0403ebba843a0bb136eea02f08736e7.js",
     "service-worker.js": "/santa_letter/service-worker.js",
     "static/css/2.d5831cfa.chunk.css.map": "/santa_letter/static/css/2.d5831cfa.chunk.css.map",
     "static/css/main.7fdaa0db.chunk.css.map": "/santa_letter/static/css/main.7fdaa0db.chunk.css.map",
-    "static/js/2.69f7e6e4.chunk.js.LICENSE": "/santa_letter/static/js/2.69f7e6e4.chunk.js.LICENSE"
+    "static/js/2.ed8ad736.chunk.js.LICENSE": "/santa_letter/static/js/2.ed8ad736.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.57896b15.js",
     "static/css/2.d5831cfa.chunk.css",
-    "static/js/2.69f7e6e4.chunk.js",
+    "static/js/2.ed8ad736.chunk.js",
     "static/css/main.7fdaa0db.chunk.css",
-    "static/js/main.19eb844d.chunk.js"
+    "static/js/main.b175de99.chunk.js"
   ]
 }
