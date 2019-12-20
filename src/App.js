@@ -65,7 +65,7 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
-            <h1>さんたさんにてがみを書くやつ</h1>
+            <h1>さんたさんにてがみを<ruby>書<rt>か</rt></ruby>くやつ</h1>
           </header>
           <Container>
             <Row>
